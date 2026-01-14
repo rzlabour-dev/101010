@@ -1017,3 +1017,156 @@ select {
         text-align: center;
     }
 }
+/* PDF Compressor specific styles */
+.compression-levels {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.compression-btn {
+    padding: 10px 15px;
+    background: var(--light-gray);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    flex: 1;
+    text-align: center;
+}
+
+.compression-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.compression-btn:hover:not(.active) {
+    border-color: var(--primary);
+}
+
+.comparison {
+    background: var(--light);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.comparison-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.comparison-item {
+    background: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* PDF Page Remover specific styles */
+.page-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.page-thumbnail {
+    background: white;
+    border: 2px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+}
+
+.page-thumbnail:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.page-thumbnail.selected {
+    border-color: var(--primary);
+    background: rgba(67, 97, 238, 0.05);
+}
+
+.page-number {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.page-preview {
+    width: 100px;
+    height: 120px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.page-checkbox {
+    margin-top: 10px;
+}
+
+.page-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.page-checkbox label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.page-checkbox input[type="checkbox"]:checked + label {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-checkbox input[type="checkbox"]:checked + label:after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.page-summary {
+    background: var(--light);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* PDF Preview specific */
+.pdf-preview {
+    width: 100%;
+    height: 150px;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 3rem;
+}
